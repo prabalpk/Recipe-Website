@@ -1,0 +1,25 @@
+CREATE TABLE add_recipe (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255),
+    ingredients TEXT,
+    instructions TEXT,
+    image VARCHAR(255)
+);
+
+
+INSERT INTO add_recipe (title, ingredients, instructions, image) VALUES
+(
+    'Matar Paneer',
+    'Paneer cubes, Green peas, Onion, Tomato, Ginger, Garlic, Spices (cumin, garam masala, turmeric, red chili, salt), Oil, Cream',
+    '1. Heat oil and add cumin seeds. 2. Sauté onions, ginger, and garlic. 3. Add tomatoes and cook till soft. 4. Add spices and cook till oil separates. 5. Add peas and paneer, simmer for 10 mins. 6. Add cream and garnish with coriander.',
+    'images/panner.png'
+);
+
+CREATE TABLE `users` (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL UNIQUE,
+    `password` VARCHAR(255) NOT NULL,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`)
+); 
